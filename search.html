@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    
+    
+
+
+
+    
+    
+<!-- Sản phẩm -->
+    <div class="row d-flex justify-content-center" style="margin-top: 10px; ">
+        <div class="row bg-white">
+            <div class="container-fruid mt-3">
+                <div class="row">
+                    <div class="col-sm-6"><h3>Tin Đăng Mới</h3>
+                        <!-- <input style="width: 300px; height: 40px;" type="text" placeholder="Search" ng-model="searchName"> -->
+                        <!-- <button  ng-clcik="searchName" style="margin-top: -69px; margin-left: 247px;" class="btn btn-dark">Tìm</button> -->
+                    
+                    </div>
+                    
+                    <div class="col-sm-6">
+                        <div><h3>Sắp sếp theo giá</h3></div>
+                        <div style="margin-top: -40px; margin-left: 250px;">
+                            <button class="btn btn-primary" ng-click="tang()">Tăng dần</button>
+                            <button class="btn btn-primary" ng-click="giam()">Giảm dần</button>
+                        </div>
+                    </div>
+                    
+                    
+               
+                <div class="row" >
+                
+                    <!-- | orderBy : sort -->
+                    <div  class="col-lg-2 col-md-4 col-sm-6 poly-prod" ng-repeat="p in products | orderBy : sort | filter:searchName" >
+                        <div  >
+                            <ul class="list-group">
+                                <li  class="list-group-item list-group-item-action">
+        <!-- id="{{p.demo}}" class="{{p.class}}" -->
+        
+                                    <div class="panel-body">
+                                        <a href="#!detail/{{p.id}}"><img class="img-responsive" src="{{p.Img}}" alt=""
+                                                style="width: 100%;"></a>
+                                    </div>
+                                    <a href="#!detail/{{p.id}}" class="stylee">
+                                        <p class="col-sm-10 card-text">{{p.Text}}</p>
+                                    </a>
+                                    <b>
+                                        <p class="text-danger">${{p.Price}}</p>
+                                    </b>
+                                </li>
+                            </ul>
+                        </div>       
+                    </div>
+                </div>
+                <p class="d-flex justify-content-center ">
+                    <button ng-if="dung" ng-click="xemthem()" type="button" class="btn" ><b>Mở
+                            rộng</b> </button>
+                            <button ng-if="!dung" ng-click="thugon()" type="button" class="btn" ><b>Thu gọn
+                                </b> </button>
+                </p>
+            </div>
+        </div>
+    </div>
+<!-- Sản phẩm -->
+
+    <div class="row " style="margin-top: 50px; color: rgb(95, 91, 91); ">
+    
+        <h1><span style="font-size:18px; color: black;">Chợ Tốt - Chợ Mua Bán, Rao Vặt Trực Tuyến Hàng Đầu Của Người
+                Việt</span></h1>
+            <div style="font-size: small;">
+                <p>
+                    Chợ Tốt chính thức gia nhập thị trường Việt Nam vào đầu năm 2012, với mục đích tạo ra cho bạn
+                    một kênh rao vặt trung gian, kết nối người mua với người bán lại với nhau bằng những giao dịch
+                    cực kỳ đơn giản, tiện lợi, nhanh chóng, an toàn, mang đến hiệu quả bất ngờ.
+                </p>
+                <p>
+                    Đến nay, Chợ Tốt tự hào là Website rao vặt được ưa chuộng hàng đầu Việt Nam. Hàng ngàn món hời
+                    <a href="">từ Bất động sản, Nhà cửa,</a> <a href="">Xe cộ,</a> <a href="">Đồ điện tử,</a>
+                    <a href="">Thú cưng,</a> <a href=""> Vật dụng cá nhân...</a> đến tìm việc làm,
+                    thông tin tuyển dụng, các dịch vụ - du lịch được đăng tin, rao bán trên Chợ Tốt.
+                </p>
+                <p>
+                    Với Chợ Tốt, bạn có thể dễ dàng mua bán, trao đổi bất cứ một loại mặt hàng nào, dù đó là đồ cũ
+                    hay đồ mới với nhiều lĩnh vực:
+                </p>
+                <p>
+                    <b>Bất động sản:</b> Cho thuê, Mua bán <a href="">nhà đất,</a> <a href="">căn hộ chung cư,</a>
+                    <a href="">văn phòng mặt bằng kinh doanh,</a> phòng trọ đa dạng về diện tích, vị trí
+
+                </p>
+                <p>
+                    <b>Phương tiện đi lại:</b> xe ô tô, xe máy có độ bền cao, giá cả hợp lý, giấy tờ đầy đủ.
+
+                </p>
+                <div id="demo1" class="collapse prome">
+                    <p>
+                        <b>Đồ dùng cá nhân:</b> <a href="">quần áo,</a> <a href="">giày dép,</a>
+                        <a href="">túi xách,</a> <a href="">đồng hồ...</a> đa phong cách, hợp thời trang.
+                    </p>
+                    <p>
+                        <b>Đồ điện tử:</b> <a href="">điện thoại di động,</a> <a href="">máy tính bảng,</a> <a
+                            href="">laptop,</a>
+                        <a href="">tivi,</a> <a href="">loa,</a> <a href="">amply</a>...; đồ điện gia dụng: <a
+                            href="">máy giặt,</a>
+                        <a href="">tủ lạnh,</a> <a href="">máy lạnh điều hòa</a>... với rất nhiều nhãn hiệu, kích
+                        thước khác nhau.
+                    </p>
+                    <p>
+                        <b><a href="">Vật nuôi, thú cưng</a></b> đa chủng loại: <a href="">gà,</a> <a
+                            href="">chó</a> (<a href="">chó phốc sóc</a>,<a href="">chó pug</a>,
+                        <a href="">chó poodle</a>...),<a href="">chim</a>, <a href="">mèo</a> (<a href="">mèo anh
+                            lông ngắn,</a><a href=""> mèo munchkin</a>...),
+                        <a href=""> cá</a>, hamster giá cực tốt.
+                    </p>
+                    <p>
+                        <b>Tuyển dụng, việc làm</b> với hàng triệu công việc hấp dẫn, phù hợp tại <a href="">Việc
+                            Làm Tốt</a> - Kênh tuyển dụng hiệu quả, uy tín được phát triển bởi Chợ Tốt.
+                    </p>
+                    <p>
+                        <b><a href="">Dịch vụ</a></b>,<b><a href=""> du lịch</a></b>: khách sạn, vé máy bay, vé tàu,
+                        vé xe, tour du lịch và các voucher du lịch... uy tín, chất lượng.
+                    </p>
+                    <p>
+                        <b><a href="">Đồ ăn, thực phẩm:</a></b> các món ăn được chế biến thơm ngon, hấp dẫn, thực
+                        phẩm tươi sống, an toàn & giá cả hợp lý.
+                    </p>
+                    <p>Và còn rất nhiều mặt hàng khác nữa đã và đang được rao bán tại Chợ Tốt.</p>
+                    <p>
+                        Mỗi người trong chúng ta đều có những sản phẩm đã qua sử dụng và không cần dùng tới nữa. Vậy
+                        còn chần chừ gì nữa mà không để nó trở nên giá trị hơn với người khác. 
+                        Rất đơn giản, bạn chỉ cần chụp hình lại, mô tả cụ thể về sản phẩm và sử dụng ứng dụng
+                        Đăng tin miễn phí của Chợ Tốt là đã có thể đến gần hơn với người cần nó.
+                    </p>
+                    <p>
+                        Không những thế, website chotot.com còn cung cấp cho bạn thông tin về giá cả các mặt hàng để
+                        bạn có thể tham khảo. Đồng thời, thông qua Blog kinh nghiệm, Chợ Tốt sẽ tư vấn, chia sẻ cho
+                        bạn những thông tin bổ ích, bí quyết, mẹo vặt giúp bạn có những giao dịch mua bán an toàn,
+                        đảm bảo. Chợ Tốt cũng sẵn sàng hỗ trợ bạn trong mọi trường hợp cần thiết.
+                    </p>
+            </div>
+        
+        </div>
+        <p class="d-flex justify-content-center ">
+            <button type="button" class="btn" data-bs-toggle="collapse" data-bs-target="#demo1"><b>Mở
+                    rộng</b> </button>
+        </p>
+        <h3><span style="font-size:18px">Các từ khóa phổ biến</span></h3>    
+    </div>
+    <div class="row">
+<div class="col-md-3 col-sm-6" >
+                <ul style="color: rgb(95, 91, 91); ">
+                    <li><a href="#">Samsung Note 10</a></li>
+                    <li><a href="#">Tivi cũ giá rẻ</a></li>
+                    <li><a href="#">Thuê Phòng Trọ</a></li>
+                    <li><a href="#">Chợ đồ cũ Sài Gòn</a></li>
+                    <li><a href="#">Máy quay cũ</a></li>
+                    <li><a href="#">Loa Cũ</a></li>
+                    <li><a href="#">Điện Thoại Cũ</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <ul>
+                    <li><a href="#">Điện thoại Samsung</a></li>
+                    <li><a href="#">Thuê Căn Hộ Chung Cư</a></li>
+                    <li><a href="#">Mua Bán Nhà Đất</a></li>
+                    <li><a href="#">Máy tính để bàn giá rẻ</a></li>
+                    <li><a href="#">Micro cũ</a></li>
+                    <li><a href="#">Máy tính để bàn cũ</a></li>
+                    <li><a href="#">Laptop Apple Macbook</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <ul>
+                    <li><a href="#">Điện Thoại iPhone</a></li>
+                    <li><a href="#">Mua Bán Đất</a></li>
+                    <li><a href="#">Điện thoại Samsung Cũ</a></li>
+                    <li><a href="#">Ống kính (lens) cũ</a></li>
+                    <li><a href="#">Tai Nghe Cũ</a></li>
+                    <li><a href="#">Máy Tính Bảng Cũ</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <ul>
+                    <li><a href="#">Dàn karaoke cũ</a></li>
+                    <li><a href="#">Thuê Nhà Nguyên Căn</a></li>
+                    <li><a href="#">Chợ đồ cũ Hà Nội</a></li>
+                    <li><a href="#">Máy ảnh cũ</a></li>
+                    <li><a href="#">Amply</a></li>
+                    <li><a href="#">Laptop Cũ</a></li>
+                </ul>
+            </div>
+    </div>
+</body>
+
+</html>

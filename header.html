@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class=" row navbar navbar-expand-sm bg-warning navbar-dark ">
+
+
+
+        <div class="container-fluid ">
+
+            <ul class="nav navbar-nav navbar-right d-flex justify-content-center">
+
+                <a class="navbar-brand" href="#"><img src="IMG/transparent_logo.png" alt=""
+                        style="height: 35px;"></a>
+                <li class="nav-item text-dark " style="margin-left: 30px;">
+                    <a class="nav-link text-dark" href="#">Trang chủ</a>
+                </li>
+                <li class="nav-item" style="margin-left: 30px;">
+                    <a class="nav-link text-dark" href="#">&#10070;Quản lý tin</a>
+                </li>
+                <li class="nav-item" style="margin-left: 30px;">
+                    <a class="nav-link text-dark" href="#">&#9742;Đơn Hàng</a>
+                </li>
+                <li class="nav-item" style="margin-left: 30px;">
+                    <a class="nav-link text-dark" href="#">&#9993;Chát</a>
+                </li>
+                <li class="nav-item" style="margin-left: 30px;">
+                    <a class="nav-link text-dark" href="#">&#8265;Thông Báo</a>
+                </li>
+                <li class="nav-item navbar-collapse collapse dropdown " style="margin-left: 30px;">
+                    
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> ...Thêm <span class="caret"></span></a>
+                    <div>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">MENU</a></li>
+                            <li><a href="#">MENU</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">MENU</a></li>
+                        </ul>
+                    </div>
+                    
+                </li>
+
+                <li class="row">
+                    <div>
+                        <form method="post" style="width: 550px;">
+                            <input placeholder="&#9886;Search&#9887;" class="form-control" ng-model="searchName">
+                            <a href="#!search"><button ng-clcik="searchName" style="margin-top: -69px; margin-left: 247px;" class="btn btn-dark">Tìm</button></a>
+                            <!-- <button ng-click="searchSP()" data-toggle="modal" data-target="#exampleModal">Tìm</button> -->
+                        </form>
+                    </div>
+                    
+                </li>
+
+                <!-- <li class="nav-item" style="margin-left: 40px;">
+                    <a href="#" class="nav-link text-dark"><b>&#9786; Đăng Nhập</b></a>
+                </li> -->
+                <li class="nav-item" style="margin-left: 40px;">
+                    <a href="#" class="nav-link" style="background-color: rgb(243, 158, 0);"><b>&#9744; Đăng
+                            tin</b></a>
+                </li>
+                <li class="nav-item" style="margin-left: 40px;">
+                    <a href="#!cart" class="nav-link">
+                        <img src="IMG/shopping-cart.png" alt="">
+                        <span style="color: rgb(255, 0, 0);">SL: {{cart.length}}</span>
+                    </a>
+                </li>
+            </ul>
+
+
+        </div>
+
+
+    </header>
+</body>
+</html>

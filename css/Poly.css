@@ -1,0 +1,148 @@
+header{
+    position: relative;
+}
+
+.shopping-mall {
+    position:absolute;
+    bottom: 20px;
+    font-variant: small-caps;
+}
+
+.shopping-mall>h1{
+    font-family: Impact;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 2px black;
+    padding-bottom: 0px;
+    border-bottom: 1px dptted gray;
+    margin: 0px;
+}
+
+.shopping-small>h5{
+    margin-top: tpx;
+    letter-spacing: 0.5px;
+}
+
+.poly-cart ul{
+    padding:0px;
+    margin: 0px;
+    list-style: none;
+    font-variant: small-caps;
+}
+
+.poly-cart{
+    margin-top: 5px;
+}
+
+.poly-cart .panel-heading strong{
+    font-variant: small-caps;
+    font-size: larger;
+    text-shadow: 0 0 2px darkgray;
+}
+
+.poly-prod .panel-body img{
+    height: 150px;
+    max-width: 100%;
+}
+
+.poly-prod{
+    /* text-align: center; */
+    padding: 5px;
+}
+
+.stylee{
+    color: #222;
+    display: block;
+    margin-top: 8px;
+    text-decoration: none;
+    
+}
+a:hover{
+    color: rgb(67, 140, 189);
+}
+
+a{
+    text-decoration: none;
+}
+ul>li>a{
+    color:  rgb(95, 91, 91);;
+}
+
+.click_img:hover{
+    border-style: solid;
+    border-color: red;
+}
+.call_phone{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color:#589f39;
+    font-weight: 700;
+    text-align: center;
+}
+
+.chat_{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #589f39;
+    background-color: #fff;
+    font-weight: 700;
+    text-align: center;
+    
+}
+.chat_:hover{
+    background-color: #c4d1be;
+}
+.call_phone:hover{
+    background-color: #397e1c;
+}
+.giohang:hover{
+    background-color: #e46666;
+}
+.sanphamkhac:hover{
+    background-color: #9fb4b4;
+}
+
+.giohang{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    border-radius: 4px;
+    /* font-size: 16px; */
+    color: #e02424;
+    background-color: #ffdbdb;
+    /* font-weight: 700; */
+    text-align: center;
+}
+
+.sanphamkhac{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    border-radius: 4px;
+    /* font-size: 16px; */
+    color: #e02424;
+    background-color: #ffdbdb;
+    /* font-weight: 700; */
+    text-align: center;
+}
+

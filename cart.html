@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row" style="background-color: white; margin-top: 15px;">
+        <table class="table ">
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Hình ảnh</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+                <th> </th>
+            </tr>
+            <tr ng-repeat="c in cart track by $index">
+                <td>{{c.name}}</td>
+                <td><img width="100px" src="{{c.Img1}}" alt=""></td>
+                <td>{{c.Price}}</td>
+                <td><span class="btn" ng-click="subClick($index)">-</span> {{c.quantity}} <span class="btn" ng-click="addClick($index)">+</span></td>
+                <td>{{c.Price1*c.quantity|number:0}}</td>
+                <td> <span class="btn" ng-click="delProduct($index)">Xóa</span></td>
+            </tr>
+            <tr>
+                <td colspan="4"><b>Tổng tiền:</b></td>
+                <td colspan="2"><b>{{sumMoney|number:0}}</b></td>
+            </tr>
+        </table>
+        <button style="width: 250px; margin-left: 10px;" class="btn sanphamkhac">
+            <img src="IMG/logout.png" alt="">
+            <a href="#!/sadsa"><b>Mua các sản phẩm khác</b> </a>
+        </button>
+    </div>
+    
+</body>
+</html>

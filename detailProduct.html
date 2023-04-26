@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <article style="margin-top: 20px">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="row" style="background-color: rgb(227, 233, 233);">
+                    <div class="d-flex justify-content-center">
+                        <a href=""><img src="{{products[index].Img}}" style="max-width: 300px;" alt=""></a>
+                    </div>
+                    <div class="row">
+                        <div  class="col-sm-2" style="margin-top: 15px;">
+                            <a href=""><img src="{{products[index].Img1}}" class="click_img" style="width: 110px; height: 100px;"></a>
+                        </div>
+                        <div  class="col-sm-2" style="margin-top: 15px;">
+                            <a href=""><img src="{{products[index].Img2}}" class="click_img" style="width: 110px; height: 100px;"></a>
+                        </div>
+                        <div  class="col-sm-2" style="margin-top: 15px;">
+                            <a href=""><img src="{{products[index].Img3}}" class="click_img" style="width: 110px; height: 100px;"></a>
+                        </div>
+                        <div  class="col-sm-2" style="margin-top: 15px;">
+                            <a href=""><img src="{{products[index].Img4}}" class="click_img" style="width: 110px; height: 100px;"></a>
+                        </div>
+                        <div  class="col-sm-2" style="margin-top: 15px;">
+                            <a href=""><img src="{{products[index].Img5}}" class="click_img" style="width: 110px; height: 100px;"></a>
+                        </div>
+                        <div  class="col-sm-2" style="margin-top: 15px;">
+                            <a href=""><img src="{{products[index].Img6}}" class="click_img" style="width: 110px; height: 100px;"></a>
+                        </div>
+                    </div>
+                    
+
+                    
+                </div>
+
+                <div class="row" style="background-color: white; margin-top: 25px;" >
+                    <p><b>{{products[index].Textthongso}}</b></p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>{{products[index].thongso1}} </p>
+                            <p>{{products[index].thongso2}}</p>
+                            <p>{{products[index].thongso3}}</p>
+                            <p>{{products[index].thongso4}}</p>
+                            
+                        </div>
+                        <div class="col-sm-6">
+                            <p>{{products[index].thongso5}}</p>
+                            <p>{{products[index].thongso6}}</p>
+                            <p>{{products[index].thongso7}}</p>
+                            <p>{{products[index].thongso8}}</p>
+                            <p>{{products[index].thongso9}}</p>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+                <div  style="background-color: aliceblue; font-size: 20px;">
+                    <div style="margin-left: 10px; margin-right: 10px;">
+                        <div><b style="font-size: 30px;">Thông tin liên hệ</b></div>
+                        <p><a href=""><img class="rounded-circle" style="width: 15%; " src="{{products[index].IMGprotifile}}" alt=""></a>
+                                {{products[index].tennguoiban}}</p>
+                        <p>Email: {{products[index].Email}}</p>
+                        <p>Facebook: <a href="">{{products[index].Facebook}}</a></p>
+
+                        <div style="background-color: #589f39;">
+                            <a class="btn call_phone" href="">
+                                <img  src="IMG/helpline.png" alt="">
+                                <span><b style="margin-left: 10px; font-size: 20px;">Hotline: {{products[index].SDT}} </b></span>
+                            </a>
+                        </div>
+                        <div style="margin-top: 10px; ">
+                            <a href=""  class=" chat_">
+                                <img src="IMG/chat.png" alt="">
+                                <span style="font-size: 20px; color: #589f39; ">Chat với người bán</span>
+                            </a>
+                            
+                        </div>   
+
+                    </div>    
+                </div>   
+                   
+                <div ng-if=""></div>
+
+                <div style="background-color: white; margin-top: 10px;" >
+                    <div style="margin-left: 10px;">
+                        <p><b>Mô tả chi tiết</b></p>
+                        <p>
+                            <!-- Xe tay ga honda xưa <br>
+                            50cc <br>
+                            Xe nguyên zin <br>
+                            Cafe buoi sang đi chợ rất dể thương <br>
+                            Sưu tầm chưng quán cafe chât <br>
+                            Anh chị em chần liên hệ nhé -->
+                            {{products[index].mota}}
+                        </p>
+                    </div>
+                   
+                </div>
+
+                <div style="background-color: white; margin-top: 10px;" >
+                    <div style="margin-left: 10px;">
+                        <p>
+                            <b>{{products[index].name}}</b><br>
+                            <span style="color: red;"><b>{{products[index].Price}} VNĐ</b></span>
+                        </p>
+                        <div style="font-size: small;">
+                            <p >Địa chỉ: {{products[index].diachi}}</p>
+                            <p>Thời gian: {{products[index].thoigian}}</p>
+                            <p>Duyệt: {{products[index].kiemduyet}}.</p>
+                        </div>
+                        </div>
+                       
+                   
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <button style="width: 100%;" ng-click="addCart(products[index])" class="btn giohang">
+                            <img src="IMG/shopping-cart.png" alt="">
+                            <b>Thêm vào giỏ hàng</b> 
+                        </button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button style="width: 100%;" class="btn sanphamkhac">
+                            <img src="IMG/logout.png" alt="">
+                            <a href="#!/"><b>Mua các sp khác</b> </a>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </article>
+</body>
+
+</html>
