@@ -1,217 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/Poly.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/Poly.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-
-</head>
-<body ng-app="myapp" style="height:1500px; background-color: rgb(226, 226, 209);">
-    <div ng-controller="myCtrl" class="container">
-        <div class="row">
-            <!-- fixed-top -->
-            <!-- <header ng-include="'header.html'"></header>
+  </head>
+  <body
+    ng-app="myapp"
+    style="height: 1500px; background-color: rgb(226, 226, 209)"
+  >
+  <div ng-controller="myCtrl" class="container">
+        <header class="row navbar navbar-expand-sm bg-warning navbar-dark">
+      <div class="row">
+          <!-- fixed-top -->
+          <!-- <header ng-include="'header.html'"></header>
              -->
-             <header class=" row navbar navbar-expand-sm bg-warning navbar-dark ">
 
+          <div class="container-fluid">
+            <ul
+              class="nav navbar-nav navbar-right d-flex justify-content-center"
+            >
+              <a class="navbar-brand" href="#"
+                ><img
+                  src="IMG/transparent_logo.png"
+                  alt=""
+                  style="height: 35px"
+              /></a>
+              <li class="nav-item text-dark" style="margin-left: 30px">
+                <a class="nav-link text-dark" href="#">Trang chủ</a>
+              </li>
+              <li class="nav-item" style="margin-left: 30px">
+                <a class="nav-link text-dark" href="#">&#10070;Quản lý tin</a>
+              </li>
+              <li class="nav-item" style="margin-left: 30px">
+                <a class="nav-link text-dark" href="#">&#9742;Đơn Hàng</a>
+              </li>
+              <li class="nav-item" style="margin-left: 30px">
+                <a class="nav-link text-dark" href="#">&#9993;Chát</a>
+              </li>
+              <li class="nav-item" style="margin-left: 30px">
+                <a class="nav-link text-dark" href="#">&#8265;Thông Báo</a>
+              </li>
+              <li
+                class="nav-item navbar-collapse collapse dropdown"
+                style="margin-left: 30px"
+              >
+                <a href="" class="dropdown-toggle" data-toggle="dropdown"
+                  ><span class="glyphicon glyphicon-user"></span> ...Thêm
+                  <span class="caret"></span
+                ></a>
+                <div>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">MENU</a></li>
+                    <li><a href="#">MENU</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">MENU</a></li>
+                  </ul>
+                </div>
+              </li>
 
+              <li class="row">
+                <div>
+                  <form method="post" style="width: 550px">
+                    <input
+                      placeholder="&#9886;Search&#9887;"
+                      class="form-control"
+                      ng-model="searchName"
+                    />
+                    <a href="#!search"
+                      ><button
+                        ng-clcik="searchName"
+                        style="margin-top: -65px; margin-left: 500px"
+                        class="btn btn-dark"
+                      >
+                        Tìm
+                      </button></a
+                    >
+                    <!-- <button ng-click="searchSP()" data-toggle="modal" data-target="#exampleModal">Tìm</button> -->
+                  </form>
+                </div>
+              </li>
 
-                <div class="container-fluid ">
-        
-                    <ul class="nav navbar-nav navbar-right d-flex justify-content-center">
-        
-                        <a class="navbar-brand" href="#"><img src="IMG/transparent_logo.png" alt=""
-                                style="height: 35px;"></a>
-                        <li class="nav-item text-dark " style="margin-left: 30px;">
-                            <a class="nav-link text-dark" href="#">Trang chủ</a>
-                        </li>
-                        <li class="nav-item" style="margin-left: 30px;">
-                            <a class="nav-link text-dark" href="#">&#10070;Quản lý tin</a>
-                        </li>
-                        <li class="nav-item" style="margin-left: 30px;">
-                            <a class="nav-link text-dark" href="#">&#9742;Đơn Hàng</a>
-                        </li>
-                        <li class="nav-item" style="margin-left: 30px;">
-                            <a class="nav-link text-dark" href="#">&#9993;Chát</a>
-                        </li>
-                        <li class="nav-item" style="margin-left: 30px;">
-                            <a class="nav-link text-dark" href="#">&#8265;Thông Báo</a>
-                        </li>
-                        <li class="nav-item navbar-collapse collapse dropdown " style="margin-left: 30px;">
-                            
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> ...Thêm <span class="caret"></span></a>
-                            <div>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">MENU</a></li>
-                                    <li><a href="#">MENU</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">MENU</a></li>
-                                </ul>
-                            </div>
-                            
-                        </li>
-        
-                        <li class="row">
-                            <div>
-                                <form method="post" style="width: 550px;">
-                                    <input placeholder="&#9886;Search&#9887;" class="form-control" ng-model="searchName">
-                                    <a href="#!search"><button ng-clcik="searchName" style="margin-top: -65px; margin-left: 500px;" class="btn btn-dark">Tìm</button></a>
-                                    <!-- <button ng-click="searchSP()" data-toggle="modal" data-target="#exampleModal">Tìm</button> -->
-                                </form>
-                            </div>
-                            
-                        </li>
-        
-                        <!-- <li class="nav-item" style="margin-left: 40px;">
+              <!-- <li class="nav-item" style="margin-left: 40px;">
                             <a href="#" class="nav-link text-dark"><b>&#9786; Đăng Nhập</b></a>
                         </li> -->
-                        <li class="nav-item" style="margin-left: 40px;">
-                            <a href="#" class="nav-link" style="background-color: rgb(243, 158, 0);"><b>&#9744; Đăng
-                                    tin</b></a>
-                        </li>
-                        <li class="nav-item" style="margin-left: 40px;">
-                            <a href="#!cart" class="nav-link">
-                                <img src="IMG/shopping-cart.png" alt="">
-                                <span style="color: rgb(255, 0, 0);">SL: {{cart.length}}</span>
-                            </a>
-                        </li>
-                    </ul>
-        
-        
-                </div>
-        
-        
-            </header>
-            <!-- <input  placeholder="&#9886;Tìm kiếm&#9887;" class="btn form-control" ng-model="searchName"></button> -->
-            <div ng-view></div>        
-            <footer ng-include="'footer.html'"></footer>    
-                                      
-            <script>
-                var indexCart=0;
-                var app=angular.module("myapp",["ngRoute"]);
-                app.controller("myCtrl",function($scope,$rootScope,$routeParams,$http){
+              <li class="nav-item" style="margin-left: 40px">
+                <a
+                  href="#"
+                  class="nav-link"
+                  style="background-color: rgb(243, 158, 0)"
+                  ><b>&#9744; Đăng tin</b></a
+                >
+              </li>
+              <li class="nav-item" style="margin-left: 40px">
+                <a href="#!cart" class="nav-link">
+                  <img src="IMG/shopping-cart.png" alt="" />
+                  <span style="color: rgb(255, 0, 0)">SL: {{cart.length}}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <!-- <input  placeholder="&#9886;Tìm kiếm&#9887;" class="btn form-control" ng-model="searchName"></button> -->
+        <div ng-view></div>
+        <footer ng-include="'footer.html'"></footer>
 
-                    $scope.sort='Price1';
-                    $scope.tang=function(){
-                        $scope.sort='Price1';
-                    }
-                    $scope.giam=function(){
-                        $scope.sort='-Price1';
-                    }
-               
+        <script>
+          var indexCart = 0;
+          var app = angular.module("myapp", ["ngRoute"]);
+          app.controller(
+            "myCtrl",
+            function ($scope, $rootScope, $routeParams, $http) {
+              $scope.sort = "Price1";
+              $scope.tang = function () {
+                $scope.sort = "Price1";
+              };
+              $scope.giam = function () {
+                $scope.sort = "-Price1";
+              };
 
-                    //Thêm sản phẩm
-                    $scope.addCart=function(p){
-                        if(typeof $rootScope.cart=='undefined'){
-                        $rootScope.cart=[];
-                        };
-                        $scope.countCart=$rootScope.cart.length;
-                        if($rootScope.cart.filter(i => i.id == p.id).length==0){
-                            $rootScope.cart.push(p);
-                            $rootScope.cart[$scope.countCart].quantity=1;       
-                        }
-                    } 
-                    
-                    $rootScope.sumMoney=0;
-                    //Tính tổng tiền bên giỏ hàng
-                    if(typeof $rootScope.cart!='undefined'){ //Có giỏ hàng mới tính tổng
-                        for(var i=0; i<$rootScope.cart.length;i++){
-                            $rootScope.sumMoney=$rootScope.sumMoney+$rootScope.cart[i].quantity*$rootScope.cart[i].Price1;
-                        }
-                    }
-                
-                    //Nhấn nút Cộng để thêm sản phẩm
-                    $scope.addClick=function(index){
-                        $rootScope.cart[index].quantity= $rootScope.cart[index].quantity+1;
-                        if(typeof $rootScope.cart!='undefined'){
-                            $rootScope.sumMoney=0;
-                            for(var i=0; i<$rootScope.cart.length;i++){
-                            $rootScope.sumMoney=$rootScope.sumMoney+$rootScope.cart[i].quantity*$rootScope.cart[i].Price1;
-                         }
-                    }
-                    }
-                    //nhấn nút trừ để trừ sản phẩm
-                    $scope.subClick=function(index){
-                        if($rootScope.cart[index].quantity > 1)
-                        $rootScope.cart[index].quantity= $rootScope.cart[index].quantity-1
-                        if(typeof $rootScope.cart!='undefined'){
-                            $rootScope.sumMoney=0;
-                            for(var i=0; i<$rootScope.cart.length;i++){
-                            $rootScope.sumMoney=$rootScope.sumMoney+$rootScope.cart[i].quantity*$rootScope.cart[i].Price1;
-                         }
-                    }
-                    }
-        
-                    //Xóa sản phẩm trong giỏ hàng
-                    $scope.delProduct=function(index){
-                        $rootScope.cart.splice(index,1);
-                        if(typeof $rootScope.cart!='undefined'){
-                            $rootScope.sumMoney=0;
-                            for(var i=0; i<$rootScope.cart.length;i++){
-                            $rootScope.sumMoney=$rootScope.sumMoney+$rootScope.cart[i].quantity*$rootScope.cart[i].Price1;
-                         }
-                    }
-                    }
+              //Thêm sản phẩm
+              $scope.addCart = function (p) {
+                if (typeof $rootScope.cart == "undefined") {
+                  $rootScope.cart = [];
+                }
+                $scope.countCart = $rootScope.cart.length;
+                if ($rootScope.cart.filter((i) => i.id == p.id).length == 0) {
+                  $rootScope.cart.push(p);
+                  $rootScope.cart[$scope.countCart].quantity = 1;
+                }
+              };
 
-                    $scope.so = 12;
-                    $scope.dung=true;
-                    $scope.xemthem = function () {
-                        $scope.so = 18;
-                        $scope.dung=false;
-                    }
-                    $scope.thugon = function () {
-                        $scope.so = 12;
-                        $scope.dung=true;
-                    }
-                    
+              $rootScope.sumMoney = 0;
+              //Tính tổng tiền bên giỏ hàng
+              if (typeof $rootScope.cart != "undefined") {
+                //Có giỏ hàng mới tính tổng
+                for (var i = 0; i < $rootScope.cart.length; i++) {
+                  $rootScope.sumMoney =
+                    $rootScope.sumMoney +
+                    $rootScope.cart[i].quantity * $rootScope.cart[i].Price1;
+                }
+              }
 
-                    $scope.products=[];
-                    $http.get('products.json').then(function(reponse){
-                         $scope.products=reponse.data;
-                         $scope.index = $scope.products.findIndex(record => record.id == $routeParams.url);
-                     })
-                   //Truyền tham số index từ trang chủ đến trang sản phẩm chi tiết
-                   $scope.index=$routeParams.url;
-                   
-                });
-                app.config(function($routeProvider){
-                    $routeProvider
-                    .when("/detail/:url",{
-                        templateUrl: "detailProduct.html?" + Math.random(),
-                        controller: "myCtrl"
-                    })
-                    .when("/cart",{
-                        templateUrl: "cart.html?" + Math.random(),
-                        controller: "myCtrl"
-                    })
-                    .when("/search",{
-                        templateUrl: "search.html?" + Math.random(),
-                        controller: "myCtrl"
-                    })
-                    .when("/contact",{
-                        templateUrl: "contact.html?" + Math.random(),
-                        controller: "myCtrl"
-                    })
-                    .otherwise({
-                        templateUrl: "listproduct.html",
-                         controller:  "myCtrl"   
-                    })
-                });
-               
-            </script>
-            
+              //Nhấn nút Cộng để thêm sản phẩm
+              $scope.addClick = function (index) {
+                $rootScope.cart[index].quantity =
+                  $rootScope.cart[index].quantity + 1;
+                if (typeof $rootScope.cart != "undefined") {
+                  $rootScope.sumMoney = 0;
+                  for (var i = 0; i < $rootScope.cart.length; i++) {
+                    $rootScope.sumMoney =
+                      $rootScope.sumMoney +
+                      $rootScope.cart[i].quantity * $rootScope.cart[i].Price1;
+                  }
+                }
+              };
+              //nhấn nút trừ để trừ sản phẩm
+              $scope.subClick = function (index) {
+                if ($rootScope.cart[index].quantity > 1)
+                  $rootScope.cart[index].quantity =
+                    $rootScope.cart[index].quantity - 1;
+                if (typeof $rootScope.cart != "undefined") {
+                  $rootScope.sumMoney = 0;
+                  for (var i = 0; i < $rootScope.cart.length; i++) {
+                    $rootScope.sumMoney =
+                      $rootScope.sumMoney +
+                      $rootScope.cart[i].quantity * $rootScope.cart[i].Price1;
+                  }
+                }
+              };
 
-        </div>
+              //Xóa sản phẩm trong giỏ hàng
+              $scope.delProduct = function (index) {
+                $rootScope.cart.splice(index, 1);
+                if (typeof $rootScope.cart != "undefined") {
+                  $rootScope.sumMoney = 0;
+                  for (var i = 0; i < $rootScope.cart.length; i++) {
+                    $rootScope.sumMoney =
+                      $rootScope.sumMoney +
+                      $rootScope.cart[i].quantity * $rootScope.cart[i].Price1;
+                  }
+                }
+              };
+
+              $scope.so = 12;
+              $scope.dung = true;
+              $scope.xemthem = function () {
+                $scope.so = 18;
+                $scope.dung = false;
+              };
+              $scope.thugon = function () {
+                $scope.so = 12;
+                $scope.dung = true;
+              };
+
+              $scope.products = [];
+              $http.get("products.json").then(function (reponse) {
+                $scope.products = reponse.data;
+                $scope.index = $scope.products.findIndex(
+                  (record) => record.id == $routeParams.url
+                );
+              });
+              //Truyền tham số index từ trang chủ đến trang sản phẩm chi tiết
+              $scope.index = $routeParams.url;
+            }
+          );
+          app.config(function ($routeProvider) {
+            $routeProvider
+              .when("/detail/:url", {
+                templateUrl: "detailProduct.html?" + Math.random(),
+                controller: "myCtrl",
+              })
+              .when("/cart", {
+                templateUrl: "cart.html?" + Math.random(),
+                controller: "myCtrl",
+              })
+              .when("/search", {
+                templateUrl: "search.html?" + Math.random(),
+                controller: "myCtrl",
+              })
+              .when("/contact", {
+                templateUrl: "contact.html?" + Math.random(),
+                controller: "myCtrl",
+              })
+              .otherwise({
+                templateUrl: "listproduct.html",
+                controller: "myCtrl",
+              });
+          });
+        </script>
+      </div>
     </div>
-    
-
-</body>
-
+  </body>
 </html>
